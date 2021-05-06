@@ -39,35 +39,40 @@
 # Two arrays are called similar if one can be obtained from another by swapping at most one pair of elements in one of the arrays.
 #
 # Given two arrays a and b, check whether they are similar.
-
-def areSimilar(a, b):
-    same = True
-    one = True
-    go  =True
-    i = 0
-    j = 0
-    while go:
-
-        if a[i] == b[j]:
-            same = True
-        else:
-            if one:
-               b[j] ,b[j+1] = b[j+1], b[j]
-               one = False
-               continue
-
-            same = False
-        j = j + 1
-        i= i + 1
-        if j == len(b):
-            go = False
-    if same:
-        return True
-    else:
-        return False
-a = [1, 2, 3]
-b = [2, 1, 2]
-
-print(areSimilar(a, b))
+#
+# def areSimilar(a, b):
+#     same = True
+#     one = True
+#     go  =True
+#     i = 0
+#     j = 0
+#     while go:
+#
+#         if a[i] == b[j]:
+#             same = True
+#         else:
+#             if one:
+#                 if a[i] in b:
+#                     element_index = b.index(a[i])
+#                     b[j], b[element_index] = b[element_index], b[j]
+#                     one = False
+#                     continue
+#
+#             same = False
+#             if same == False:
+#                 break
+#
+#         j = j + 1
+#     i= i + 1
+#     if j == len(b):
+#         go = False
+#     if same:
+#         return True
+#     else:
+#         return False
+# a = [832, 998, 148, 570, 533, 561, 894, 147, 455, 279]
+# b = [832, 570, 148, 998, 533, 561, 455, 147, 894, 279]
+#
+# print(areSimilar(a, b))
 
 
